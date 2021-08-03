@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  overflow: hidden;
+}
+
+.App-header {
+  max-height:10vh;
+  display: flex;
+  padding: 1vw;
+  justify-content: flex-start;
+  font-size: calc(2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Preset-Container {
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
+  justify-content: space-evenly;
+}
+
+.TerraS {
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(255, 123, 172), #00FFFF) 1;
+  border-radius: 20px;
+  padding: 1vw;
+  width: 18vw;
+  height: 2vh;
+  margin-left: 2vw;
+}
+.P-Elem {
+  border-color: rgb(201, 201, 201);
+  border-style: solid;
+  padding: 1vw;
+  width: 18vw;
+  height: 2vh;
+  margin-left: 2vw;
+}
+
+.Graph-Container {
+  width: 70vw;
+}
+.Content-Container {
+  padding: 1vw;
+}
