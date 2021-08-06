@@ -1,3 +1,6 @@
+## Work in progrees.
+# First draft of mirror analysis:
+![optimiseScreenshot](https://user-images.githubusercontent.com/34670358/128559152-10bb2cc0-45a5-4cd9-967b-d70a0e166e6e.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
