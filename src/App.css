@@ -22,14 +22,25 @@
   justify-content: space-evenly;
 }
 
-.TerraS {
-  border-style: solid;
+
+
+.TerraS[active='Terra'] {
   border-image: linear-gradient(to right, rgb(255, 123, 172), #00FFFF) 1;
-  border-radius: 20px;
-  padding: 1vw;
-  width: 18vw;
-  height: 2vh;
-  margin-left: 2vw;
+}
+.TerraS:hover {
+  box-shadow: 0px 0px 5px  grey;
+}
+.Looper[active='Abracadabra'] {
+  border-image: linear-gradient(to right, rgb(255, 123, 172), #00FFFF) 1;
+}
+.Looper:hover {
+  box-shadow: 0px 0px 5px  grey;
+}
+.Info:hover {
+  box-shadow: 0px 0px 5px  grey;
+}
+.Info[active='Info'] {
+  border-image: linear-gradient(to right, rgb(255, 123, 172), #00FFFF) 1;
 }
 .P-Elem {
   border-color: rgb(201, 201, 201);
@@ -39,7 +50,9 @@
   height: 2vh;
   margin-left: 2vw;
 }
-
+.Info {
+  width: 2vw;
+}
 .Graph-Container {
   width: 70vw;
 }

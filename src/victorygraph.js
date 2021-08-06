@@ -1,7 +1,7 @@
 import './Victorygraph.css';
 import React, {useState} from 'react';
 import { VictoryLine, VictoryChart, VictoryLegend, VictoryScatter, VictoryAxis, VictoryTheme } from 'victory';
-
+import {ReactComponent as LongDiagram} from './Optimised-Long.svg';
 // Graph init
 import {
   ApolloClient,
@@ -280,21 +280,25 @@ class Victorygraph extends React.Component {
         </div>
         <form className="Form">
             <label className="FormSection">
-              <div className="FormTitle">
+              <div className="FormTitle TextDescription">
               Liquidity Pool:
               </div>
-              <select name="Asset" onChange={this.ChangeOptions}>
+              <select className="DropMenu" name="Asset" onChange={this.ChangeOptions}>
                 <TerraFarm></TerraFarm>
               </select>
             </label>
             <label className="FormSection">
-              <div className="FormTitle">
+              <div className="FormTitle TextDescription">
               Farm:
               </div>
-              <label >LONG</label>
-              <input type="radio" name="Position" value="LONG" defaultChecked onClick={this.ChangeOptions}></input>
-              <label >SHORT</label>
-              <input type="radio" name="Position" value="SHORT" onClick={this.ChangeOptions}></input>
+              <div className="RadioSelectors">
+                <label >LONG</label>
+                <input type="radio" name="Position" value="LONG" defaultChecked onClick={this.ChangeOptions}></input>
+              </div>
+              <div className="RadioSelectors">
+                <label >SHORT</label>
+                <input type="radio" name="Position" value="SHORT" onClick={this.ChangeOptions}></input>
+              </div>
             </label>
             <label>
               <p>APR: {parseFloat(this.state.TerraData.APR*100).toFixed(2)} %</p>
@@ -314,6 +318,12 @@ class Victorygraph extends React.Component {
               </label>
               <input type="number" name="C_Blocks" value={this.state.C_Blocks} onChange={this.ChangeOptions}/>
               <input type="button" value="Calculate Optimal"/>
+            </div>
+            <div className="ImageSection">
+              <div>
+                <img className="OptimiseLogo" alt="Not loaded" src="./Asset1.svg"></img>
+                
+              </div>
             </div>
             <p>total fees: {this.state.totalFees}</p>
             <p>Final Amount: {this.state.totalAmount}</p>
